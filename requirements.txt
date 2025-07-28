@@ -9,3 +9,6 @@ ultralytics
 opencv-python-headless
 Pillow
 scikit-learn
+torch-scatter
+torch-sparse
+torch-geometric
