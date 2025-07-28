@@ -1,5 +1,22 @@
 import torch
 import torch.nn.functional as F
+import os
+import subprocess
+import sys
+
+# Install PyG and its dependencies (only if not already installed)
+try:
+    import torch_geometric
+except ImportError:
+    subprocess.check_call([
+        sys.executable, "-m", "pip", "install",
+        "torch-scatter==2.1.2",
+        "torch-sparse==0.6.17",
+        "torch-cluster==1.6.1",
+        "torch-spline-conv==1.2.2",
+        "torch-geometric==2.5.2"
+    ])
+
 from torch_geometric.nn import GCNConv
 
 class GCN(torch.nn.Module):
