@@ -9,3 +9,4 @@ ultralytics>=8.0.20
 scikit-learn>=1.2.2
 matplotlib
 networkx
+opencv-python-headless
